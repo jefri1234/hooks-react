@@ -1,4 +1,8 @@
 import "./globals.css";
+//Uso del componente STRICMODE para  
+//habilitar comportamientos de compilación y advertencias adicionales 
+import { StrictMode } from 'react';
+
 
 export const metadata = {
   title: "Create Next App",
@@ -9,7 +13,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        {children}
+        <StrictMode>
+          {children}
+        </StrictMode>
       </body>
     </html>
   );

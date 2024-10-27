@@ -1,14 +1,16 @@
-import React from 'react'
-import {useContext} from 'react'
-const { profesor } = useContext(PersonasContext);
+"use client"
+import React, { useContext } from 'react';
+import { PersonasContext } from '../app/hooks/useContext'; 
 
 function Panel() {
   //3))--- USO EL CONTEXTO 
- 
+  const persona = useContext(PersonasContext); // Obtén los datos del contexto
   return(
-      <div>
-          <h1>contexto creado nombre de profesor: <span className='text-red-600'>{contexto.nombre}</span></h1>
-      </div>
+    <div>
+    <h1>soy panel</h1>
+    <p>Nombre: {persona.nombre}</p>
+    <p>Edad: {persona.edad}</p>
+  </div>
   )
 }
 

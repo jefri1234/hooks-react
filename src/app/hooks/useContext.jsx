@@ -14,7 +14,7 @@ const personas = {
 };
 
 //2))----CREAR EL CONTEXTO
-const PersonasContext= React.createContext(personas.profesor)
+export const PersonasContext= React.createContext(personas.profesor)
 
 function UseContext() {
     return (
@@ -24,6 +24,7 @@ function UseContext() {
     );
 }
 export default UseContext
+
 
 
 
