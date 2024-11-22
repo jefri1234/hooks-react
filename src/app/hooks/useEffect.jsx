@@ -1,4 +1,12 @@
 "use client"
+//SE USA PARA REALIZAR EFECTOS SECUNDARIOS EN componente 
+//solicitudes a la api
+//actualizar el DOM
+// manejar eventos
+// manejar el estado de un componente
+
+//Se ejecuta después de cada renderización.
+
 import React, { useState, useEffect } from 'react'
 
 function UseEffect() {

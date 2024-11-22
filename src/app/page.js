@@ -1,11 +1,9 @@
 "use client"
 import React, { Profiler } from 'react'
-import { UseState } from './hooks/useState'
-import UseEffect from './hooks/useEffect'
 import UseContext from './hooks/useContext'
-import Colegio from './Colegio'
 
 function Home() {
+  //uso del componente Profiler para medir el performance en REACT
   const onRenderCallback = (
     id, // El id del Profiler que se está midiendo
     phase, // "mount" o "update"
@@ -22,14 +20,9 @@ function Home() {
 
   return (
     <>
-      <div>Home</div>
       <Profiler id='usecontext' onRender={onRenderCallback}>
-        <UseState/>
         <UseContext />
       </Profiler>
-      <hr></hr>
-      <Colegio />
-
     </>
   )
 }
